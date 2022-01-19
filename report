@@ -1,0 +1,384 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{fancyhdr}
+\linespread{1.5}
+\usepackage{geometry}
+\geometry{
+a4paper,
+total={210mm,297mm},
+left=1.25in,
+right=0.75in,
+top=0.75in,
+bottom=0.75in,
+}
+
+\begin{document}
+\pagestyle{empty}
+\begin{center}
+{\large \textbf{VISVESVARAYA TECHNOLOGICAL UNIVERSITY}}
+\par
+\vspace{3pt}
+{\large \textbf{``JNANA SANGAMA'',BELAGAVI - 590 018}}
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.80in,height=0.75in]{../fig/vtu}
+\end{figure}
+\\
+\textbf{A MINI PROJECT REPORT}
+\par
+\textbf{on}
+\par
+\vspace{3pt}
+{\Large \textbf{``BUS TICKET MANAGEMENT SYSTEM''}}
+\par
+\vspace{8pt}
+\textit{\textbf{Submitted by}}
+\par
+\vspace{6pt}
+\textbf{\large ASHRITH SHETTY}\hspace{2.0in}\textbf{\large 4SF17IS017}\\
+\textbf{\large GOWTHAM P.B}\hspace{2.0in}\textbf{\large   4SF17IS027}\\
+\par
+\vspace{3pt}
+\textit{\textbf{In partial fulfillment of the requirements for the V semester }}
+\par
+\vspace{0.5pt}
+\Large \textbf{DBMS LABORATORY WITH MINI PROJECT}
+\par
+\vspace{0.5pt}
+\normalsize \centering \textbf{of}
+\par
+\vspace{0.5pt}
+\large \textbf{BACHELOR OF ENGINEERING }
+\par
+\vspace{0.5pt}
+\textbf{in}
+\par
+\vspace{0.5pt}
+\large \textbf{INFORMATION SCIENCE \& ENGINEERING}
+\par
+\vspace{2pt}
+\textit{\textbf{Under the Guidance of}}
+\par
+\vspace{2pt}
+\textbf{Ms. Jayapadmini Kanchan}
+\par
+\vspace{0.5pt}
+\textbf{\centering \begin{normalsize}
+Assistant Professor, Department of ISE
+\end{normalsize} }
+\par
+\vspace{0.5pt}
+\normalsize \centering \textbf{at}\\
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=1.0in,height=0.85in]{../fig/Sahyadri}
+\end{figure}
+{\LARGE \textbf{SAHYADRI}}
+\par
+\vspace{6pt}
+{\large \textbf{College of Engineering \& Management}}
+\par
+\vspace{3pt}
+{\large \textbf{Adyar, Mangaluru - 575 007}}
+\par
+\vspace{3pt}
+{\large \textbf{2021 - 22}}
+
+\newpage
+
+{\LARGE \textbf{SAHYADRI}}
+\par
+\vspace{6pt}
+{\Large \textbf{College of Engineering \& Management}}
+\par
+\vspace{3pt}
+{\large \textbf{Adyar, Mangaluru - 575 007}}
+\par
+\vspace{0.25in}
+{\large \textbf{Department of Information Science \& Engineering}}
+\par
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=1.0in,height=0.75in]{../fig/sahyadri}
+\end{figure}
+{\Large \textbf{CERTIFICATE}}
+\end{center}
+\par
+\vspace{0.10in}
+\setstretch{1.5}
+\noindent This is to certify that the \textbf{Mini Project} entitled \textbf{``BUS TICKET MANAGEMENT SYSTEM''}  has been carried out by
+\textbf{ ASHRITH SHETTY (4SF17IS017)} and \textbf{GOWTHAN P.B  (4SF17IS002)}, the bonafide students of Sahyadri College of Engineering \& Management in partial fulfillment of the requirements for the V semester \textbf{DBMS Laboratory with Mini Project (18CSL58)} of \textbf{Bachelor of Engineering in Information Science \& Engineering} of Visvesvaraya Technological University, Belagavi during the year  2021 - 22. It is certified that all corrections/suggestions indicated for Internal Assessment have been incorporated in the report deposited in the departmental library. The mini project report has been approved as it satisfies the academic requirements in respect of mini project work.
+
+\par
+\vspace{0.75in}
+\setstretch{1.15}
+\begin{tabbing}
+\hspace{0.1in}---------------------------------------\hspace{0.3in}\=------------------------------\hspace{0.5in}------------------------------\\
+\hspace{0.000025in}\textbf{    Ms. Jayapadmini Kanchan}\hspace{0.30in}\textbf{    Mr. Ganaraj K}\hspace{0.9in}\textbf{Dr. Shamanth Rai}\\
+\hspace{0.40in}Assistant Professor\hspace{0.8in}Assistant Professor\hspace{0.6in}HOD \& Associate Professor\\
+\hspace{0.31in}Dept. of ISE, SCEM\hspace{0.7in}Dept. of ISE, SCEM\hspace{0.8in}Dept. of ISE, SCEM\\
+
+\end{tabbing}
+
+\par
+\vspace{0.25in}
+\begin{center}
+\large \textbf{External Practical Examination:}
+\end{center}
+\begin{flushleft}
+\begin{normalsize}Examiner's Name \end{normalsize}
+\hspace{7.5cm}
+\begin{normalsize}Signature with Date\end{normalsize}
+\end{flushleft}
+\par
+\vspace{0.05in}
+\begin{flushleft}
+1. \ldots\ldots\ldots\ldots\ldots\ldots \ldots \hspace{6.8cm}\ldots\ldots\ldots\ldots \ldots\ldots\ldots 
+\par
+\vspace{0.25in}	
+2. \ldots\ldots\ldots\ldots\ldots\ldots \ldots \hspace{6.8cm}\ldots\ldots\ldots\ldots \ldots\ldots\ldots 
+\end{flushleft}
+
+
+\newpage
+\begin{center}
+{\LARGE \textbf{SAHYADRI}}
+\par
+\vspace{6pt}
+{\Large \textbf{College of Engineering \& Management}}
+\par
+\vspace{3pt}
+{\large \textbf{Adyar, Mangaluru - 575 007}}
+\par
+\vspace{0.25in}
+{\large \textbf{Department of Information Science \& Engineering}}
+\par
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=1.25in,height=1in]{../fig/sahyadri}
+\end{figure}
+{\Large \textbf{DECLARATION}} 
+\end{center}
+\par
+\vspace{0.10in}
+\setstretch{1.5}
+\noindent We hereby declare that the entire work embodied in this Mini Project Report titled
+\textbf{``BUS TICKET MANAGEMENT SYSTEM''} has been carried out by us at Sahyadri College of Engineering and Management, Mangaluru under the supervision of \textbf{Ms. Jayapadmini Kanchan} as the part of the V semester \textbf{DBMS Laboratory with Mini Project (18CSL58)} of \textbf{Bachelor of Engineering} in \textbf{Information Science \& Engineering}. This report has not been submitted to this or any other University.\\
+\vspace{0.25in}
+\begin{flushright}
+\textbf{ASHRITH SHETTY (4SF16IS017)}\\
+\textbf{GOWTHAM P.B (4SF16IS027)}\\
+SCEM, Mangaluru \\
+\end{flushright}
+
+% For Individuals
+%\begin{flushright}
+%Place: Mangaluru \hspace{7.8cm} \textbf{Student Name 1}\\
+%Date : \hspace{11.7cm}4SF11IS001\\
+%V Semester, B.E., ISE\\
+%SCEM, Mangaluru\\
+%\end{flushright}
+
+\newpage
+\pagestyle{plain}
+\pagenumbering{roman}
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{\numberline{}Abstract}
+The Main aim of Bus ticket Management Mini DBMS project is for bus agencies to keep records of busses and the drivers or the conductors. We aim to demonstrate the use of create, read, update and delete MySQL operations through this project. This project starts by adding details of employee either a driver or a conductor and then adding bus details.The agency will have the customer details whose registration is done.The user can add bus details with the route.
+\chapter*{Acknowledgement}
+\addcontentsline{toc}{chapter}{\numberline{}Acknowledgement}
+It is with great satisfaction and euphoria that we are submitting the Mini Project Report on \textbf{“BUS TICKET MANAGEMENT SYSYTEM”}. We have completed it as a part of the V semester \textbf{DBMS Laboratory with Mini Project (18CSL58)} of \textbf{Bachelor of Engineering} in \textbf{Information Science \& Engineering} of Visvesvaraya Technological University, Belagavi.
+\par
+\vspace{0.15in}
+\noindent We are profoundly indebted to our guide, \textbf{Ms. Jayapadmini Kanchan}, Assistant Professor, Department of Information Science \& Engineering for innumerable acts of timely advice, encouragement and We sincerely express our gratitude.
+\par
+\vspace{0.15in}
+\noindent We express our sincere gratitude to \textbf{Dr. Shamanth Rai}, Head \& Associate Professor, Department of Information Science \ Engineering for his invaluable support and guidance...
+\par
+\vspace{0.15in}
+\noindent We sincerely thank  \textbf{Dr. Rajesha S}, Principal, Sahyadri College of Engineering \& Management  and \textbf{Dr. D. L. Prabhakara}, Director, Sahyadri Educational Institutions,who have always been a great source of inspiration.
+\par
+\vspace{0.15in}
+\noindent Finally, yet importantly, We express our heartfelt thanks to our family \& friends for their wishes and encouragement throughout the work.
+\\
+\\
+%\begin{flushright}
+%\textbf{Student Name 1}\\
+%\textbf{Student Name 2}\\
+%\end{flushright}
+
+% For Individuals
+\begin{flushright}
+\textbf{ASHRITH SHETTY}\hspace{8.3cm} \textbf{GOWTHAM P.B}\\
+\hspace{0.25in}4SF17IS017 \hspace{3.80in}4SF17IS027\\
+V Sem, B.E., ISE\hspace{8.6cm}V Sem, B.E., ISE\\
+SCEM, Mangaluru\hspace{8.4cm}SCEM, Mangaluru\\
+\end{flushright}
+
+\setstretch{1.4}
+\renewcommand{\contentsname}{Table of Contents}
+\tableofcontents
+\addcontentsline{toc}{chapter}{\numberline{}Table of Contents}
+\listoffigures
+\addcontentsline{toc}{chapter}{\numberline{}List of Figures}
+\listoftables
+\addcontentsline{toc}{chapter}{\numberline{}List of Tables}
+\newpage
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\fontsize{10}{12} \selectfont Mini Project Title}
+\rhead{\fontsize{10}{12} \selectfont Chapter \thechapter}
+\lfoot{\fontsize{10}{12} \selectfont Department of Information Science \& Engineering, SCEM, Mangaluru}
+\rfoot{\fontsize{10}{12} \selectfont Page \thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\setstretch{1.5}
+\pagenumbering{arabic}
+\chapter{Introduction}
+\par
+Information and communication are the essential part of human life. The demand for the
+food, cloth, etc. are increasing with respect to the increasing population, to which
+researchers and scientists are trying to find innovative solutions.in India the major source
+of income is the agriculture itself hence its known as “land of agriculture”. Ever since
+people learned to grow crops, harvest them and sell them to market, they have tried to
+increase the profit by seeking information from others. But the information gained by
+farmers over the centuries is not adequate to grow crops in the varying weather condition,
+soil fertility, pests and diseases. This has raised the need for the latest information which
+allows the farmers to deal with these changes smoothly.
+\par
+There is a huge demand in the market for web services based on agriculture. The
+applications with varying requirements help the agriculturist to do several jobs like
+designs, decision making, chemical analyses, and GPS centred services etc. Portable
+devices provide an appropriate information entree point and are convenient to be carried
+everywhere.
+\par
+\section{Purpose}
+The Main objective of the Bus Ticket Booking Management mini-project is to ease the process of booking tickets 
+and keeping track of buses and employees. This management system will drastically reduce the manual work in 
+bus ticket booking centers and travel agencies. The customers will visit the travel agency to book tickets. The 
+travel agency will then use the management system and keep track of its customers and their payments. Along 
+with this they will also be able to manage the employee details, bus details and route details. Through this project, 
+we aim to demonstrate the use of create, insert, update and delete MySQL operations.
+\section{Scope}
+The resource management for large number of nodes is quite difficulty from aspect of configuration, deployment and efficient resource utilization. This model will select best configuration for job using MapReduce profiling. This resource management technique includes cost-aware resource provisioning, VMaware scheduling and online virtual machine reconfiguration.
+\section{Overview}
+Bus ticket management system lets the bus agencies to keep track of the users.Various new concepts are implemented in this proposed system.HTML,CSS for designing and front end development of the system.Most popular technology nowadays in the fields of web development,PHP is implemented having the major role in validation and for whole processing.With the help of documentation it's very much easy for the any third party to understand the system.
+
+\chapter{Requirements Specification}
+\section{Hardware Specification}
+\begin{itemize}
+\item Processor : Intel(R) Core(TM) i3-1005G1 CPU @ 1.20GHz   1.19 GHz
+\item RAM : 8GB
+\item Hard Disk : 1TB
+\item Input Device : Standard keyboard and Mouse
+\item Output Device : Monitor
+\end{itemize}
+\section{Software Specification}
+\begin{itemize}
+\item Database : MySQL 5.6.17
+\item Markup Language :  HTML
+\item Scripting Language: PHP 5.5.12
+\item IDE :NetBeans 8.0.2
+\end{itemize}
+
+\chapter{System Design}
+\section{ER Diagram}
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=4in,height=3in]{../fig/erd}
+\caption{System Architecture Diagram}
+\end{figure}
+Employee works for the agency,and the agency assign the bus to the employee.the Bus has the fixed route and the customer makes the payment.the Customer travels through specific route.
+\section{Mapping From ER Diagram to Schema Diagram}
+Figure 3.2 represent the relational schema of the proposed system.We create the relation employee,bus,routes,customer,payment in the relational schema corresponding to the regular entities in the ER diagram.EMPID,BUSID,CUSID,PAYMENTID are the primary key for the relation employee,bus,routes,customer,payment.
+\section{Assumptions}
+\begin{itemize}
+	\item One bus can have multiple employees.
+	\item One route can have multiple customers.
+	\item one bus can have multiple payments.
+	
+\end{itemize}
+\section{Schema Diagram}
+A data flow diagram(DFD) is a graphical representation of the "flow" of data through an information system .DFDs can also be for the visualization of data processing.On a DFD, data items flow from an external data source or an internal data store to an internal data store or an external data sink, via an internal process. A DFD provides no information about the timing or ordering of processes, or about whether processes will operate in sequence or in parallel.It is therefore quite different from a flowchart , which shows the flow of control through an algorithm, allowing users to determine what operations will be performed, in what order, and under what circumstances, but not what kinds of data will be input to and output from the system,nor where the data will come from and go to, nor where the data will be stored.
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=4in,height=2.5in]{schema.png}
+\caption{Schema Diagram}
+\end{figure}
+\chapter{Implementation}
+Explain modules with psuedocode
+\par
+Paragraph may be added here 
+\section{Tables Used}
+\begin{table}
+\begin{tabular}{|c|c|c|}\hline
+\textbf{Sl. No.}& \textbf{Work} & \textbf{Duration(in Weeks)}\\[6pt] \hline \normalsize
+1&Information Collection on DFB \& VNC&1 \\ \hline
+2&Information collection on development tools&2\\ \hline
+3&Integrating DirectFB \& VNC&8\\ \hline
+4&Cross Compiling \& Porting&2\\ \hline
+5&Building JPEG libraries&2\\ \hline
+6&Testing&2\\ \hline
+\end{tabular}
+\caption {Work Flow}
+
+\par
+\vspace{0.25in}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{1}{|m{1.5cm}|}{\vspace{9pt}\textbf{TC\#}}&
+\multicolumn{1}{m{3.5cm}|}{\vspace{9pt}\textbf{Description}}&
+\multicolumn{1}{m{4.0cm}|}{\vspace{9pt}\textbf{Expected Result}}&
+\multicolumn{1}{m{4.0cm}|}{\vspace{9pt}\textbf{Actual Result}}&
+\multicolumn{1}{m{1.5cm}|}{\vspace{9pt}\textbf{Status}}\\[10pt]
+\hline
+\multicolumn{1}{|m{1.5cm}|}{\vspace{9pt}TC-1}&
+\multicolumn{1}{m{3.5cm}|}{\vspace{9pt}Drag }&
+\multicolumn{1}{m{4.0cm}|}{\vspace{9pt}Drag }&
+\multicolumn{1}{m{4.0cm}|}{\vspace{9pt}Drag }&
+\multicolumn{1}{m{1.5cm}|}{\vspace{9pt}Pass }\\[10pt]
+\hline
+\multicolumn{1}{|m{1.5cm}|}{\vspace{9pt}TC-2}&
+\multicolumn{1}{m{3.5cm}|}{\vspace{9pt}Drag }&
+\multicolumn{1}{m{4.0cm}|}{\vspace{9pt}Display  }&
+\multicolumn{1}{m{4.0cm}|}{\vspace{9pt}Node }&
+\multicolumn{1}{m{1.5cm}|}{\vspace{9pt}Pass }\\[10pt]
+\hline
+\multicolumn{1}{|m{1.5cm}|}{\vspace{9pt}TC-3}&
+\multicolumn{1}{m{3.5cm}|}{\vspace{9pt}Select }&
+\multicolumn{1}{m{4.0cm}|}{\vspace{9pt}Removal  }&
+\multicolumn{1}{m{4.0cm}|}{\vspace{9pt}Selected }&
+\multicolumn{1}{m{1.5cm}|}{\vspace{9pt}Pass }\\[10pt]
+\hline
+
+\end{tabular}
+\caption {Test cases}
+\end{table}
+\chapter{Results and Disscussion}
+Snapshots with explanation
+\chapter{Conclusion and Future work}
+BUS TICKET MANAGEMENT SYSTEM is a web based application.Which has high integrity to change the current problems and system failure.Also the same system with some basic and minute changes in programming and interface can be implemented for users also who can book ticket .From our project experience we have experienced that computerized system id more helpful rather than the traditional way of storing data.It helped us to get in depth knowledge about how system is planned,organized and managed.it's not everyone's cup of tea to manage such a huge transportation system so,by implementing BUS TICKET MANAGEMENT SYSTEM things are going to get much better.
+\newpage
+\pagestyle{plain}
+\renewcommand{\bibname}{References}
+\bibliography{references}
+\addcontentsline{toc}{chapter}{References}
+\begin{thebibliography}{35}
+\bibitem{ds}Database systems Models, Languages, Design and Application Programming, Ramez Elmasri and Shamkant B. Navathe, 7th Edition, Pearson.
+
+\bibitem{dm}Database management systems, Ramakrishnan, and Gehrke, 3rd Edition, 2014, McGraw Hill.
+
+\bibitem{korth}Silberschatz Korth and Sudharshan: Database System Concepts, 6th Edition, Mc-Graw Hill, 2013.
+
+\bibitem{mor}Coronel, Morris, and Rob, Database Principles Fundamentals of Design, Implementation and  
+Management, Cengage Learning 2012.
+
+\end{thebibliography}
+
+\end{document}
